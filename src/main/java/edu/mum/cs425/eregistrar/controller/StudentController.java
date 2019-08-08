@@ -24,7 +24,7 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-    @GetMapping(value = {"/eregistrar/students/list", "eregistrar/students/list"})
+    @GetMapping(value = {"/eregistrar/students/list"})
     public ModelAndView ListBooks(@RequestParam(defaultValue = "1") int pageNum){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("students", studentService.getAllStudentsPaged(pageNum));

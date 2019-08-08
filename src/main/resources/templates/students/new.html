@@ -108,10 +108,10 @@
                         <label class="form-label">is an International?</label><br>
                         <span th:if="${#fields.hasErrors('international')}" th:errors="*{international}"
                               class="alert alert-danger"></span>
-                        <input id="international1" name="international" type="radio" class="" value="false"
-                               th:value="${student.international}" style="outline: none; border: 0"> No
-                        <input id="international2" name="international" type="radio" class="" value="true"
-                               th:value="${student.international}" style="outline: none; border: 0"> Yes
+                        <input id="international1" th:name="international" type="radio" class="" th:value="0"
+                                style="outline: none; border: 0"> No
+                        <input id="international2" th:name="international" type="radio" class="" th:value="1"
+                                style="outline: none; border: 0"> Yes
                     </div>
                 </div>
             </div>
